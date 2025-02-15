@@ -1,0 +1,123 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F3FAFF;
+  color: #1072BA;
+  text-align: center;
+  padding: 50px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #1072BA;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+a:hover {
+  background-color: rgba(16, 114, 186, 0.5); /* Transparent blue */
+  opacity: 0.8; /* Slight fade effect */
+}
+
+
+/* Navigation Bar */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #1072BA;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  border-radius: 8px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 20px;
+  transition: background 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  background-color: rgba(16, 114, 186, 0.5); /* Transparent effect */
+  border-radius: 5px;
+}
+
+/* Form Styles */
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1072BA;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #1072BA;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  background-color: #1072BA;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: rgba(16, 114, 186, 0.5);
+  opacity: 0.8;
+}
+
+/* Register link */
+div {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #1072BA;
+}
+
+div a {
+  background: none;
+  color: #1072BA;
+  font-weight: normal;
+  text-decoration: underline;
+  padding: 0;
+}
+
+div a:hover {
+  color: #085A9B;
+}
