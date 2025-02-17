@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Supplier Signup</title>
-  <link rel="stylesheet" href="../CSS/styles.css">
+<?php include 'header.php'; ?>
 
-</head>
-<body>
-  <h1>Supplier Registration</h1>
 
   <form action="../server/supplierRegister.php" method="POST" enctype="multipart/form-data">
     
@@ -72,5 +63,5 @@
     Already registered?
     <a href="supplierLogin.html">Login</a>
   </div>
-</body>
-</html>
+  <?php include 'footer.php'; ?>
+

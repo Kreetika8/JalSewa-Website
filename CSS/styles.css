@@ -4,7 +4,7 @@ body {
   background-color: #F3FAFF;
   color: #1072BA;
   text-align: center;
-  padding: 50px;
+  padding: 10px;
 }
 
 a {
@@ -121,3 +121,35 @@ div a {
 div a:hover {
   color: #085A9B;
 }
+/* Footer Styles */
+footer {
+  background-color: #1072BA;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures footer stays on top */
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: rgba(255, 255, 255, 0.7); /* Light hover effect */
+}
+
+/* To avoid content being hidden behind the fixed footer */
+body {
+  padding-bottom: 60px; /* Adjust based on footer height */
+}
+

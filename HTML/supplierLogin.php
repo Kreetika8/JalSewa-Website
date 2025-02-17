@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Supplier Login</title>
-  <link rel="stylesheet" href="../CSS/styles.css">
+<?php include 'header.php'; ?>
 
-</head>
-<body>
   <h1>Supplier Login</h1>
 
   <form action="../server/supplierLogin.php" method="POST">
@@ -25,7 +17,7 @@
   </form>
 
   <div>
-    Don't have an account? <a href="supplierSignup.html">Register as a Supplier</a>
+    Don't have an account? <a href="supplierSignup.php">Register as a Supplier</a>
   </div>
-</body>
-</html>
+  <?php include 'footer.php'; ?>
+

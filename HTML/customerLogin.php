@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer Login</title>
-  <link rel="stylesheet" href="../CSS/styles.css">
+<?php include 'header.php'; ?>
 
-</head>
-<body>
   <h1>Customer Login</h1>
 
   <form action="../server/customerLogin.php" method="POST">
@@ -25,7 +17,7 @@
   </form>
 
   <div>
-    Don't have an account? <a href="customerSignup.html">Register here</a>
+    Don't have an account? <a href="customerSignup.php">Register here</a>
   </div>
-</body>
-</html>
+  <?php include 'footer.php'; ?>
+
