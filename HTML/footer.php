@@ -2,7 +2,7 @@
   <div class="container">
       <!-- Left: Logo -->
       <div class="footer-logo">
-          <img src="/IMAGE/logo.png" alt="JalSewa Logo">
+          <img src="../IMAGE/logo.png" alt="JalSewa Logo">
           <p>Water Service company</p>
       </div>
 

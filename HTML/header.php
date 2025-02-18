@@ -23,23 +23,27 @@ session_start();
         <img src="../IMAGE/logo.png" alt="JalSewa Logo">
     </div>
             <ul id="nav-list">
-                <li><a href="index.php">Home</a></li>
                 <?php if (isset($_SESSION['user'])): ?>
                     
-                    <li><a href="../server/logout.php">Logout</a></li>
                     <?php
                     if ($_SESSION['role'] === 'customer'): ?>
+                        <li><a href="customerHome.php">Home</a></li>
                         <li><a href="customerProfile.php">My Profile</a></li>
                         <li><a href="order.php">Order Water</a></li>
                         <li><a href="supplierlist.php">Suppliers</a></li>
+                        <li><a href="../server/logout.php">Logout</a></li>
                     <?php elseif ($_SESSION['role'] === 'supplier'): ?>
+                        <li><a href="customerHome.php">Home</a></li>
                         <li><a href="supplierProfile.php">My Profile</a></li>
                         <li><a href="/manage">Manage Listings</a></li>
                         <li><a href="/ratings">View Ratings</a></li>
+                        <li><a href="../server/logout.php">Logout</a></li>
                     <?php elseif ($_SESSION['role'] === 'admin'): ?>
                         <li><a href="/admin">Admin Dashboard</a></li>
+                        <li><a href="../server/logout.php">Logout</a></li>
                     <?php endif; ?>
-                <<?php else: ?>
+                <?php else: ?>
+                    <li><a href="index.php">Home</a></li>
                     <div class="auth-button">
                         <button onclick="window.location.href='index.php';">Login</button>
                     </div>
