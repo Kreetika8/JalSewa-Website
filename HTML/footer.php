@@ -41,11 +41,5 @@
       <p>2025 “JalSewa” All Rights Received</p>
   </div>
 </footer>
-
-
-  <a href="customerLogin.html" class="login-link">Login</a>
-
-
-
 </body>
 </html>
