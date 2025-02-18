@@ -1,9 +1,10 @@
 <?php
 require_once 'dbConnection.php';
-
+header('Access-Control-Allow-Origin: *');
+header('Content-type: application/json');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-   
+    
     $factory_name = $_POST['factory_name'];
     $business_number = $_POST['business_number'];
     $factory_address = $_POST['factory_address'];
@@ -54,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->execute()) {
             $stmt->close();
             $conn->close();
-            header('Location: ../HTML/supplierProfile.html');
+            header('Location: ../HTML/supplierProfile.php');
           
         } else {
             echo "error register";

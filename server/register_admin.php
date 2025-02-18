@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssss", $full_name, $email, $phone, $password);
 
     if ($stmt->execute()) {
-        header('Location: ../HTML/adminProfile.html');
+        header('Location: ../HTML/adminProfile.php');
         exit();
     } else {
         echo "Registration failed " . $stmt->error;

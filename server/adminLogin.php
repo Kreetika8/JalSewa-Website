@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        header('Location: ../HTML/adminProfile.html');
+        header('Location: ../HTML/adminProfile.php');
         exit();
     } else {
 

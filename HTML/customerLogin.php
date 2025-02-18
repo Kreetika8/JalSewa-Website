@@ -1,8 +1,15 @@
 <?php include 'header.php'; ?>
 
   <h1>Customer Login</h1>
+  <?php if (isset($_SESSION['error'])) {
+    // Display the error message
+    echo '<div style="color: red; font-weight: bold;">' . $_SESSION['error'] . '</div>';
+    // Clear the error message after displaying it
+    unset($_SESSION['error']);
+}
+?>
 
-  <form action="../server/customerLogin.php" method="POST">
+  <form action="../server/customerLoginProcess.php" method="POST">
 
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>

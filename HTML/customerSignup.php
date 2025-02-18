@@ -32,7 +32,7 @@
 
   </form>
   <div>
-    Already have an Account? <a href="customerLogin.html">Login</a>
+    Already have an Account? <a href="customerLogin.php">Login</a>
   </div>
   <?php include 'footer.php'; ?>
 

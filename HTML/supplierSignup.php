@@ -61,7 +61,7 @@
 
   <div>
     Already registered?
-    <a href="supplierLogin.html">Login</a>
+    <a href="supplierLogin.php">Login</a>
   </div>
   <?php include 'footer.php'; ?>
 

@@ -1,10 +1,46 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php';
+include '../server/dbConnection';
+session_start(); 
+
+/**  from session assign the user id and email onto the id and email variable, then 
+* then connect the db , and sql query the id and email and fetch all the data,
+* assing the fetched data onto the corresponding variables from sql, 
+* then use php inscript to insert the data onto the table below.
+*/
+
+
+// session values assigned onto the vraibles
+
+$id = $_SESSION['user_id'];
+$email= $_SESSION['email'];
+
+// connection to the database
+$conn = getDbConnection();
+
+    
+
+    // Prepare SQL to fetch supplier by email
+    $sql = "SELECT * FROM suppliers WHERE id = ? AND password = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ss", $id,$email);
+    $stmt->execute();
+    $stmt->store_result();
+
+
+        $stmt->bind_result(); // Bind the columns from the database
+        $stmt->fetch();
+
+     
+
+
+        //continue xD
+?>
 
   <h1>Supplier Profile</h1>
 
   <div>
     <h2>Factory Information</h2>
-    <p><strong>Factory Name:</strong> ABC Water Factory</p>
+    <p><strong>Factory Name: </strong> ABC Water Factory</p>
     <p><strong>Business Registration Number:</strong> 123456789</p>
     <p><strong>Factory Address:</strong> 123 Main Street, Cityville</p>
     <p><strong>Daily Production Capacity:</strong> 5000 liters</p>
