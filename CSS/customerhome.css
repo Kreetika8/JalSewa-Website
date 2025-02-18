@@ -1,0 +1,738 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;700&display=swap');
+
+/* styles.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/* Navbar Styling */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures logo, nav links, and button are spaced */
+  padding: 10px 80px; /* Adjust horizontal spacing */
+  background-color: white;
+}
+
+/* Logo */
+nav .logo {
+  flex: 1; /* Takes up available space on the left */
+}
+
+nav img {
+  width: 180px; /* Adjust logo size */
+  height: auto;
+}
+
+/* Navigation Links */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* Space between menu items */
+  padding: 0;
+  margin: 0;
+  flex: 2; /* Ensures nav links stay in the center */
+  justify-content: center; /* Center the links */
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #4D4D4D;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  color: #1072BA;
+}
+
+/* Login Button */
+nav .auth-button {
+  flex: 1; /* Pushes the button to the right */
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav button {
+  background-color: #1072BA;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background-color: #FF9800;
+}
+
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire screen */
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1; /* Places the image behind the content */
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  right: 50%; /* Adjust spacing from the right edge */
+  transform: translateY(-50%);
+  text-align: left;
+  color: white; /* Text color */
+  max-width: 40%; /* Limits the width of the text */
+}
+
+.hero-text .tagline {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.hero-text .headline {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #FF9800;
+}
+
+.hero-text .description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #FF9800; /* Primary button color */
+  color: white;
+}
+
+.btn-primary:hover{
+  background-color: #1072BA;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.btn-secondary:hover{
+  background-color: #FF9800;
+  border-color: #FF9800;
+}
+
+.login-link {
+  display: block;
+  margin-top: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+
+.our-service {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Distributes the items along the full width */
+  padding: 20px;                /* Adds space on the left and right */
+  margin: 90px;
+  gap: 5rem; 
+  margin-bottom: 50px;                     /* Adds space between the items */
+  margin-top: 100px;  
+}
+
+.our-service-tagline{
+  padding-left: 50px;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 52.8px;
+width: 600px;
+}
+
+.our-service-servics{
+  font-weight: 600;
+font-size: 20px;
+line-height: 25.3px;
+margin-bottom: 20px;
+}
+
+.our-service-aboutservice{
+  width: 500px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+  text-align: justify;
+}
+
+
+.blogs {
+  /* Flex container for the cards */
+  display: flex;
+  justify-content: space-between;
+  /* gap adds space between flex items */
+  gap: 20px;
+  /* Center the container on the page, adjust as needed */
+  max-width: 1200px;
+  margin: 50px auto;
+  /* Some horizontal padding */
+  padding: 0 20px;
+  border-top: 1px solid #AED6F1;
+  padding-top: 30px;
+}
+
+.blogs > div {
+  /* Each blog item is a "card" */
+  border-radius: 8px;
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease; /* Smooth transition */
+
+}
+ .blogs > div:hover{
+  transform: scale(1.05); /* Zoom in by 5% */
+ }
+/* Make images take full width of the card, maintain aspect ratio */
+.blogs img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* The second <div> inside each card is your title (e.g., Water Jar Delivery) */
+.blogs > div div:nth-child(2) {
+  font-size: 1.25rem; /* ~20px */
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* The third <div> inside each card is your description text */
+.blogs > div div:nth-child(3) {
+  font-size: 1rem; /* ~16px */
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.blogs button {
+  font-family: 'Poppins', Courier, monospace;
+  background-color: white;
+  color: black;
+  padding: 10px 16px;
+  font-weight: 600;
+  border: 1px solid black;
+  border-radius: 4px ;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Optional small space before the icon */
+.blogs button i {
+  margin-left: 5px;
+}
+
+.blogs button:hover {
+  color: white;
+  border: 1px solid #1072BA;
+  background-color: #1072BA;
+}
+
+/* Container for the image */
+.image-wrapper {
+  position: relative;
+  display: inline-block; /* or block, as needed */
+}
+
+
+
+/* Responsive: Stack cards on smaller screens */
+@media (max-width: 992px) {
+  .blogs {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Ensure each card takes full width (or a comfortable max-width) */
+  .blogs > div {
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+}
+
+.ad {
+  display: flex;
+  justify-content: space-evenly; /* Creates space between the two divs */
+  align-items: center; /* Aligns items vertically in the center */
+  padding: 0 20px; /* Adds space on the left and right sides */
+  margin-top: 50px;
+}
+
+/* Remove flex: 1 and set explicit widths */
+.ad > div {
+  margin: 0 10px; /* Adds space between the two divs */
+}
+
+.headings {
+  width: 40%; /* Set a smaller width for the text content */
+  
+}
+
+.ad img {
+  max-width: 100%; /* Ensures the image is responsive */
+  height: 421px; /* Fixed height */
+  width: 478px; /* Fixed width */
+}
+
+.heading {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  text-align: left;
+}
+
+.heading2 {
+  font-family: 'Outfit';
+  font-weight: 600; /* Example style for the second heading */
+  font-size: 44px;
+  line-height: 52.8px;
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.paragraph {
+  color: #666666;
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+  margin-bottom: 50px; /* Add some spacing */
+}
+
+.button button {
+  background-color: #1072BA; /* Example button style */
+  color: white;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', Courier, monospace;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Reuse existing styles */
+.suppliers {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row; /* Stack children vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 20px; /* Add padding for spacing */
+  justify-content: space-evenly; /* Creates space between the two divs */
+}
+
+.heading-supplier {
+  width: 50%;
+  text-align: center;
+  margin-bottom: 20px; /* Add space below the heading */
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 52.8px;
+  font-family: 'Be Vietnam Pro';
+  ;
+}
+
+.abut-supplier {
+  width:35%; /* Set a width for the content */
+  text-align: center; /* Center text */
+  
+}
+
+.about-supplier-heading {
+  font-family: 'Be Vietnam Pro';
+  font-weight: 600; /* Semi-bold for subheadings */
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 10px; /* Add space below the subheading */
+  text-align: left;
+
+}
+
+.about-supplier-paragraph {
+  font-family: 'Be Vietnam Pro';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #555; /* Slightly darker text for readability */
+  text-align: left;
+}
+
+.mission {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Align items vertically in the center */
+  gap: 50px; /* Add space between the image and text */
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+}
+
+.mission-image img { /* Correct selector for the image */
+  width: 535px;
+  height: 442px;
+  object-fit: cover; /* Use "cover" to maintain aspect ratio */
+}
+
+.about-mission {
+  max-width: 30%; /* Limit the width of the text content */
+}
+
+
+.aboutmission-ourmission{
+  font-family: 'Be Vietnam Pro';
+  font-weight: 600;
+  font-size: 44px;
+  color: #111D15;
+  line-height: 52.8px;
+}
+
+.aboutmission-paragraph{
+  color: #666666;
+  font-family: 'Be Vietnam Pro';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25.6px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.feature {
+  text-align: center;
+  height: fit-content;
+  width: 40%;
+  margin: 10px 0;
+  padding: 20px;
+  background-color:#F5F4F4;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY( -10px);
+}
+
+.feature-icon {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.feature-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111D15;
+}
+
+.buttons{
+  display: flex;
+  gap: 20%;
+  margin-top: 30px;
+  height: 48px;
+}
+
+.button-book{
+  width: 157px;
+  background-color: #1072BA;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: 'poppins';
+  font-size: 20px;
+  font-weight: 500;
+}
+.button-book:hover{
+  background-color: #FF9800; /* Primary button color */
+  cursor: pointer;
+}
+.button-know{
+  width: 157px;
+  color: black;
+  border: 1px solid black;
+  border-radius: 6px;
+  font-family: 'poppins';
+  font-size: 20px;
+  font-weight: 500;
+  background-color: white;
+}
+.button-know:hover{
+  background-color: #1072BA; /* Primary button color */
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.left-section, .right-section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+@media(min-width: 768px) {
+  .left-section, .right-section {
+      width: 48%;
+  }
+}
+
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #111D15;
+  margin-bottom: 20px;
+  font-family: 'Be Vietnam Pro';
+  line-height: 50.6px;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111D15;
+  font-family: 'Be Vietnam Pro';
+}
+p {
+  color: #666666;
+  font-family: 'Be Vietnam Pro';
+  font-size: 16px;
+  font-weight: 400;
+}
+.info-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #FBFBFB;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.info-box i {
+  font-size: 2rem;
+  color: #1072BA;
+  margin-right: 30px;
+  margin-left: 10px;
+
+}
+.info-box div {
+  flex: 1;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.form-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #1072BA;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+.btn:hover {
+  background-color: #FF9800;
+}
+
+
+.footer {
+  background: #0f1911;
+  color: #ffffff;
+  padding: 40px 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Logo Section */
+.footer-logo {
+  max-width: 250px;
+}
+
+.footer-logo img {
+  width: 200px;
+}
+
+
+
+
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  gap: 50px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Ensures left alignment */
+}
+.footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  padding-left: 0; /* Ensures h3 starts from the same point */
+}
+.footer-column ul {
+  list-style: none;
+  padding-left: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+.footer-column ul li {
+  margin-bottom: 8px;
+  padding-left: 0; /* Aligns list items */
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #cfcfcf;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #1072BA;
+}
+
+/* Newsletter */
+.footer-newsletter h3 {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.footer-newsletter form {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-newsletter input {
+  padding: 10px;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  background: transparent;
+  color: #ffffff;
+  outline: none;
+  width: 200px;
+}
+
+.footer-newsletter input::placeholder {
+  color: #cfcfcf;
+}
+
+.footer-newsletter button {
+  background: #1072BA;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-newsletter button:hover {
+  background: #FF9800;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #cfcfcf;
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 14px;
+}
