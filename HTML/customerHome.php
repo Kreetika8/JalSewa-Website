@@ -13,7 +13,10 @@
         </div>
       </div>
       <div class="hero-buttons">
+      <a href="order.php">
         <button class="btn-primary">Order Now</button>
+      </a>
+      <a href="supplierlist.php">
         <button class="btn-secondary">View All Services</button>
       </div>
     </div>
@@ -35,7 +38,7 @@
       <img src="../IMAGE/Jar-Blog.jpeg" alt="Water Jar">
       <div> Water Jar Delivery</div>
       <div>Get 20-liter water jars delivered straight to your home or office. Our verified suppliers ensure the highest quality and timely delivery, so you never run out of clean drinking water.</div>
-      <button> Order Now <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+      <a href="order.php"><button> Order Now <i class="fa fa-arrow-up" aria-hidden="true"></i></button></a>
     </div>
 
 
@@ -43,7 +46,7 @@
     <img src="../IMAGE/mineralWater-blog.jpeg" alt="Mineral Water">
     <div>Mineral Water Bottles</div>
     <div>Choose from a variety of mineral water bottles (1L, 2L, 5L) for your daily hydration needs. Perfect for families, offices, or on-the-go use, with options to suit every budget.</div>
-    <button> Order Now <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+    <a href="order.php"><button> Order Now <i class="fa fa-arrow-up" aria-hidden="true"></i></button></a>
   </div>
 
   <div class="blog3">
@@ -55,7 +58,7 @@
     <div>
       Need bulk water for events, construction, or large facilities? Order water tankers with just a few clicks. We connect you with reliable suppliers who deliver on time, every time.
     </div>
-    <button> Order Now <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+    <a href="order.php"><button> Order Now <i class="fa fa-arrow-up" aria-hidden="true"></i></button></a>
   </div>
   
 
@@ -66,7 +69,7 @@
     <div class="heading"> Affordable Water solutions</div>
     <div class="heading2"> Trusted & Verified <br>Suppliers</div>
     <div class="paragraph"> Every factory on JalSewa is verified by our team. Enjoy peace of mind with certified, high-quality water.</div>
-    <div class="button"> <button>See More</button></div>
+    <a href="supplierlist.php"><div class="button"> <button>See More</button></div></a>
   </div>
   <div>
     <img src="../IMAGE/model.png" alt="Girl Holding Water Bottles">
@@ -88,7 +91,7 @@
   </div>
 
   <div class="about-mission">
-    <div class=" aboutmission-ourmission"> Our Mission</div>
+  <div id="our-mission" class="aboutmission-ourmission"> Our Mission </div>
     <div class=" aboutmission-paragraph">At JalSewa, our mission is simple to make clean, safe, and affordable drinking water accessible to everyone. We believe that access to pure water is a basic human right, and we’re here to ensure no one has to compromise on quality or convenience.</div>
       <div class="features">
         <div class="feature">
@@ -117,8 +120,8 @@
         </div>
       </div>
       <div class="buttons">
-        <button class="button-book"> Book Now</button>
-        <button class="button-know"> Know More</button>
+      <a href="order.php"><button class="button-book"> Book Now</button></a>
+      <a href="#our-mission"><button class="button-know">Know More</button></a>
 
       </div>
 

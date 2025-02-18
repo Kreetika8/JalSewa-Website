@@ -45,7 +45,7 @@
         <h1 class="text-xl font-bold">Customer</h1>
         <button class="text-xl font-bold">Update Service</button>
     </div>
-    <a href="/HTML/ordersDetails.html">
+    <a href="orderdetails.php">
     <div class="bg-white p-4 rounded-lg shadow-md mb-4 border border-gray-200">
         <div class="flex items-center">
             <img alt="Profile picture of Ram Tamang" class="w-16 h-16 rounded-full mr-4" height="100" src="../IMAGE/profile.jpg" width="100"/>
@@ -64,7 +64,7 @@
     </div>
   </a>
 
-  <a href="/HTML/ordersDetails.html">
+  <a href="orderdetails.php">
     <div class="bg-white p-4 rounded-lg shadow-md mb-4 border border-gray-200">
         <div class="flex items-center">
             <img alt="Profile picture of Hari Tamang" class="w-16 h-16 rounded-full mr-4" height="100" src="../IMAGE/profile.jpg" width="100"/>
@@ -83,7 +83,7 @@
     </div>
   </a>
 
-  <a href="/HTML/ordersDetails.html">
+  <a href="orderdetails.php">
     <div class="bg-white p-4 rounded-lg shadow-md mb-4 border border-gray-200">
         <div class="flex items-center">
             <img alt="Profile picture of Bishnu Tamang" class="w-16 h-16 rounded-full mr-4" height="100" src="../IMAGE/profile.jpg" width="100"/>
@@ -103,7 +103,7 @@
   </a>
 
 
-    <a href="/HTML/ordersDetails.html">
+    <a href="orderdetails.php">
     <div class="bg-white p-4 rounded-lg shadow-md mb-4 border border-gray-200">
         <div class="flex items-center">
             <img alt="Profile picture of Dev Tamang" class="w-16 h-16 rounded-full mr-4" height="100" src="../IMAGE/profile.jpg" width="100"/>
