@@ -4,9 +4,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
     <style>
-        body {
+        /* body {
             font-family: 'Roboto', sans-serif;
-        }
+        } */
         .status-dropdown {
             appearance: none;
             background-color: transparent;
@@ -38,7 +38,7 @@
             color: black;
         }
     </style>
-</head>
+
 <body class="bg-gray-100">
 <div class="max-w-4xl mx-auto p-4">
     <div class="flex justify-between items-center mb-4">

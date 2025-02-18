@@ -2,21 +2,20 @@
   <script src="https://cdn.tailwindcss.com">
   </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
   body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding-top: 80px; /* Adjust based on navbar height */
     padding-bottom: 50px; /* Adjust based on footer height */
 }
   </style>
 
- <body class="bg-gray-100 flex flex-col items-center p-4">
- <div class="mt-20 mb-10">
+ <div class="flex justify-center items-center min-h-screen p-8 ">
+
   <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
    <div class="flex flex-col items-center">
-    <img alt="Profile picture " class="rounded-full w-24 h-24 mb-4" height="100" src="" width="100"/>
+    <img alt="Profile picture " class="rounded-full w-24 h-24 mb-4" height="100" src="../IMAGE/profile.jpg" width="100"/>
     <h2 class="text-xl font-bold">
      Ram Tamang
     </h2>
