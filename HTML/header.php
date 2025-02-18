@@ -7,7 +7,7 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer Home</title>
+  <title>JalSewa</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="../CSS/customerHome.css">
   <link rel="stylesheet" href="../CSS/supplier.css">
@@ -33,10 +33,9 @@ session_start();
                         <li><a href="supplierlist.php">Suppliers</a></li>
                         <li><a href="../server/logout.php">Logout</a></li>
                     <?php elseif ($_SESSION['role'] === 'supplier'): ?>
-                        <li><a href="customerHome.php">Home</a></li>
+                        <li><a href="supplierHome.php">Home</a></li>
                         <li><a href="supplierProfile.php">My Profile</a></li>
-                        <li><a href="/manage">Manage Listings</a></li>
-                        <li><a href="/ratings">View Ratings</a></li>
+                        <li><a href="orderlist.php">Manage Listings</a></li>
                         <li><a href="../server/logout.php">Logout</a></li>
                     <?php elseif ($_SESSION['role'] === 'admin'): ?>
                         <li><a href="/admin">Admin Dashboard</a></li>
