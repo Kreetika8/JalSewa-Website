@@ -26,36 +26,74 @@ a:hover {
 
 
 /* Navigation Bar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensures logo, nav links, and button are spaced */
+  padding: 10px 80px; /* Adjust horizontal spacing */
+  background-color: white;
+}
+
+/* Logo */
+nav .logo {
+  flex: 1; /* Takes up available space on the left */
+}
+
+nav img {
+  width: 180px; /* Adjust logo size */
+  height: auto;
+}
+
+/* Navigation Links */
 nav ul {
   list-style: none;
+  display: flex;
+  gap: 40px; /* Space between menu items */
   padding: 0;
   margin: 0;
-  background-color: #1072BA;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px 0;
-  border-radius: 8px;
+  flex: 2; /* Ensures nav links stay in the center */
+  justify-content: center; /* Center the links */
 }
 
 nav ul li {
-  display: inline;
+  display: inline-block;
 }
 
 nav ul li a {
   text-decoration: none;
-  font-size: 18px;
+  color: #4D4D4D;
+  font-size: 16px;
   font-weight: bold;
-  color: white;
-  padding: 10px 20px;
-  transition: background 0.3s ease-in-out;
+  transition: 0.3s;
 }
 
 nav ul li a:hover {
-  background-color: rgba(16, 114, 186, 0.5); /* Transparent effect */
-  border-radius: 5px;
+  text-decoration: none;
+  color: #1072BA;
 }
+
+/* Login Button */
+nav .auth-button {
+  flex: 1; /* Pushes the button to the right */
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav button {
+  background-color: #1072BA;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background-color: #FF9800;
+}
+
 
 /* Form Styles */
 form {

@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer Home</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="../CSS/customerHome.css">
-
-</head>
-
-<body>
-  <nav>
-    <div class="logo">
-        <img src="../IMAGE/logo.png" alt="JalSewa Logo">
-    </div>
-
-    <ul>
-        <li><a href="customerHome.html">Home</a></li>
-        <li><a href="customerProfile.html">About Us</a></li>
-        <li><a href="customerProfile.html">Services</a></li>
-        <li><a href="customerProfile.html">Blog</a></li>
-        <li><a href="customerProfile.html">Contact</a></li>
-    </ul>
-
-    <div class="auth-button">
-        <button>Login</button>
-    </div>
-</nav>
+<?php include 'header.php'; ?>
 
 
 

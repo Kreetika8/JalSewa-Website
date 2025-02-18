@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['role'] = 'customer'; // Store role as 'customer'
     
             // Redirect to homepage/dashboard
-            header('Location: ../HTML/index.php'); // Redirect to homepage
+            header('Location: ../HTML/customerHome.php'); // Redirect to homepage
             exit(); // Stop further script execution after the redirect
         } else {
             // Invalid password
