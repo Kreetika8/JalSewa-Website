@@ -26,6 +26,12 @@ CREATE TABLE suppliers (
     password VARCHAR(255) NOT NULL
 );
 
+ALTER TABLE suppliers
+ADD COLUMN water_bottle INT DEFAULT 0,
+ADD COLUMN water_jar INT DEFAULT 0,
+ADD COLUMN water_tanker INT DEFAULT 0;
+
+
 CREATE TABLE admin (
     id INT AUTO_INCREMENT PRIMARY KEY,
     full_name VARCHAR(255) NOT NULL,
@@ -34,3 +40,18 @@ CREATE TABLE admin (
     password VARCHAR(255) NOT NULL
 );
 
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY UNIQUE,  
+    customer_id VARCHAR(255),                       
+    supplier_id VARCHAR(255),                        
+    water_type VARCHAR(255),                         
+    quantity INT,                                    
+    delivery_address VARCHAR(255),                
+    payment_method VARCHAR(255),                    
+    status VARCHAR(255),                            
+    created_date DATE DEFAULT CURRENT_DATE,        
+    created_time TIME DEFAULT CURRENT_TIME          
+);
+
+ALTER TABLE orders
+ADD COLUMN total_price DECIMAL(10, 2) DEFAULT 0;

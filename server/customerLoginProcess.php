@@ -1,51 +1,36 @@
 <?php
+require_once 'dbConnection.php';
 session_start();
-include_once 'dbConnection.php'; // Include the database connection
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Establish the connection
-    $conn = getDbConnection(); // Get the DB connection
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $conn = getDbConnection();
 
-    // Get the submitted data
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Query to check if the user exists in the database
-    $query = "SELECT * FROM customers WHERE email = ?";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("s", $email);
+    // Query to find the user by email and password
+    $sql = "SELECT * FROM customers WHERE email = ? AND password = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ss", $email, $password);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    // Check if the email exists and verify password
     if ($result->num_rows > 0) {
-        $user = $result->fetch_assoc();
-    
-        // Assuming you have hashed passwords in your database, use password_verify() for validation
-        if (password_verify($password, $user['password'])) {
-            // Login successful: Store user session
-            $_SESSION['user'] = $user;
-            $_SESSION['role'] = 'customer'; // Store role as 'customer'
-    
-            // Redirect to homepage/dashboard
-            header('Location: ../HTML/customerHome.php'); // Redirect to homepage
-            exit(); // Stop further script execution after the redirect
-        } else {
-            // Invalid password
-            $_SESSION['error'] = "Invalid email or password!";
-            header('Location: ../HTML/customerLogin.php');  // Redirect back to login page with error
-            exit(); // Stop further script execution after the redirect
-        }
+        // If user is found, store their data in session
+        $customer = $result->fetch_assoc();
+        $_SESSION['user_id'] = $customer['id'];
+        $_SESSION['email'] = $customer['email'];
+        $_SESSION['role'] = 'customer';  // User role is 'supplier'
+        
+        // Redirect to the profile page
+        header('Location: ../HTML/customerHome.php');
+        exit();
     } else {
-        // No user found
-        $_SESSION['error'] = "No user found with that email!";
-        header('Location: ../HTML/customerLogin.php');  // Redirect back to login page with error
-        exit(); // Stop further script execution after the redirect
+        echo "Login failed! Incorrect email or password.";
     }
-    if (isset($_SESSION['error'])) {
-        echo '<div class="error-message">' . $_SESSION['error'] . '</div>';
-        unset($_SESSION['error']);
-    }
-}
 
+    // Clean up
+    $stmt->close();
+    $conn->close();
+}
 ?>

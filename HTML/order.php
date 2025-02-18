@@ -10,7 +10,6 @@
     width: 100%;
     max-width: 500px;
     margin: 20px auto; /* Centers it horizontally */
-
 }
 
 /* Order Title */
@@ -64,10 +63,11 @@
     background-color: #FF9800;
 }
 </style>
+
 <div class="order-container">
     <h1 class="order-title">Place Your Water Order</h1>
 
-    <form action="processOrder.php" method="POST" class="order-form">
+    <form action="../server/processOrder.php" method="POST" class="order-form">
         
         <label for="water_type" class="order-label">Water Type:</label>
         <select name="water_type" id="water_type" class="order-select" required>
@@ -85,23 +85,37 @@
         <label for="supplier" class="order-label">Choose Closest Supplier:</label>
         <select name="supplier_id" id="supplier" class="order-select" required>
             <?php
-            // Database connection (Ensure $conn is included from dbConnection.php)
+            
+            session_start();
+            
+         
             include '../server/dbConnection.php';
             $conn = getDbConnection();
             
             // Fetch suppliers from the database
             $sql = "SELECT id, factory_address, factory_name FROM suppliers";
-                $result = $conn->query($sql);
-                    if ($result->num_rows > 0) {
-                            while ($row = $result->fetch_assoc()) {
-                            echo "<option value='" . $row['id'] . "'>" . $row['factory_name'] . " - " . $row['factory_address'] . "</option>";
-                            }
-                    } else {
-                        echo "<option value=''>No suppliers available</option>";
-                    }
+            $result = $conn->query($sql);
+            
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<option value='" . $row['id'] . "'>" . $row['factory_name'] . " - " . $row['factory_address'] . "</option>";
+                }
+            } else {
+                echo "<option value=''>No suppliers available</option>";
+            }
 
             ?>
         </select>
+
+     
+        <label for="payment_method" class="order-label">Payment Method:</label>
+        <select name="payment_method" id="payment_method" class="order-select" required>
+            <option value="qr">QR Payment</option>
+            <option value="cash_on_delivery">Cash on Delivery</option>
+        </select>
+
+      
+        <input type="hidden" name="customer_id" value="<?php echo $_SESSION['user_id']; ?>">
 
         <button type="submit" class="order-button">Place Order</button>
     </form>
